@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tipalti.AspNetCore.ExceptionMiddleware", "Tipalti.AspNetCore.ExceptionMiddleware.csproj", "{03894A5A-4F2D-48E5-9A87-622F14ED3A57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03894A5A-4F2D-48E5-9A87-622F14ED3A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03894A5A-4F2D-48E5-9A87-622F14ED3A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03894A5A-4F2D-48E5-9A87-622F14ED3A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03894A5A-4F2D-48E5-9A87-622F14ED3A57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A3CDD6B-CF50-481D-B79A-E72E071E8888}
+	EndGlobalSection
+EndGlobal
