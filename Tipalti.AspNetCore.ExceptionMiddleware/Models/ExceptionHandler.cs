@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Tipalti.AspNetCore.ExceptionMiddleware.Models
 {
-    public class ExceptionHandler
+    internal class ExceptionHandler
     {
-        public Type ExceptionType { get; internal set; }
-        public Delegate Handler { get; internal set; }
+        internal Type ExceptionType { get; set; }
+        internal Delegate Handler { get; set; }
     }
 }

@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Projects\Tipalti.AspNetCore.ExceptionMiddleware\Tipalti.AspNetCore.ExceptionMiddleware\Tipalti.AspNetCore.ExceptionMiddleware.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove=".gitignore" />
     <None Remove="LICENSE" />

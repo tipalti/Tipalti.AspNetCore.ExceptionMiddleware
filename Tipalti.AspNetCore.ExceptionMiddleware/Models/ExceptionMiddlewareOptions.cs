@@ -6,12 +6,15 @@ using System.Text.Json;
 
 namespace Tipalti.AspNetCore.ExceptionMiddleware.Models
 {
+    /// <summary>
+    /// A configuration object for the exception middleware.
+    /// </summary>
     public class ExceptionMiddlewareOptions
     {
         /// <summary>
         /// The list of registered exception handlers for use in the middleware.
         /// </summary>
-        public List<ExceptionHandler> Handlers { get; internal set; }
+        internal List<ExceptionHandler> Handlers { get; set; } = new List<ExceptionHandler>();
 
         /// <summary>
         /// Whether to use strict type checking when getting the handler to use. Defaults to true.

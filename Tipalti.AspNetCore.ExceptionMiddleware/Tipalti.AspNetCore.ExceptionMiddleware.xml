@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tipalti.AspNetCore.ExceptionMiddleware</name>
+    </assembly>
+    <members>
+        <member name="T:Tipalti.AspNetCore.ExceptionMiddleware.ExceptionMiddlewareExtensions">
+            <summary>
+            Extensions for the exception middleware.
+            </summary>
+        </member>
+        <member name="M:Tipalti.AspNetCore.ExceptionMiddleware.ExceptionMiddlewareExtensions.UseExceptionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions})">
+            <summary>
+            Configure and use the exception middleware in the pipeline.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> instance.</param>
+            <param name="configureAction">An action to configure the middleware.</param>
+        </member>
+        <member name="M:Tipalti.AspNetCore.ExceptionMiddleware.ExceptionMiddlewareExtensions.AddHandler``1(Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions,System.Func{``0,Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionResult})">
+            <summary>
+            An extension method for easy registration of exception handlers.
+            </summary>
+            <typeparam name="T">The type of the exception to catch.</typeparam>
+            <param name="options">The <see cref="T:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions"/> instance.</param>
+            <param name="handler">A mapping action for use in the exception middleware.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tipalti.AspNetCore.ExceptionMiddleware.IExceptionMiddleware">
+            <summary>
+            An empty interface for logging.
+            </summary>
+        </member>
+        <member name="T:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions">
+            <summary>
+            A configuration object for the exception middleware.
+            </summary>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions.Handlers">
+            <summary>
+            The list of registered exception handlers for use in the middleware.
+            </summary>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions.UseStrictExceptionChecking">
+            <summary>
+            Whether to use strict type checking when getting the handler to use. Defaults to true.
+            </summary>
+            <remarks>
+            When true, the middleware uses <see cref="M:System.Object.Equals(System.Object,System.Object)"/> to determine the handler to use.
+            When false, the middleware uses <see cref="M:System.Type.IsSubclassOf(System.Type)"/> to determine the handler to use.
+            </remarks>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions.JsonSerializerOptions">
+            <summary>
+            The <see cref="T:System.Text.Json.JsonSerializerOptions"/> to use when serializing the handled response.
+            </summary>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareOptions.ContentType">
+            <summary>
+            The content type to use when writing the handled response. Defaults to application/json.
+            </summary>
+        </member>
+        <member name="T:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareResponse">
+            <summary>
+            The response used for handled exceptions.
+            </summary>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionMiddlewareResponse.ErrorCode">
+            <summary>
+            The error code to write to the response body.
+            </summary>
+        </member>
+        <member name="T:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionResult">
+            <summary>
+            Configure the response to be written by the exception middleware.
+            </summary>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionResult.StatusCode">
+            <summary>
+            The status code to write to the response.
+            </summary>
+        </member>
+        <member name="P:Tipalti.AspNetCore.ExceptionMiddleware.Models.ExceptionResult.ErrorCode">
+            <summary>
+            The error code to write to the response.
+            </summary>
+        </member>
+    </members>
+</doc>

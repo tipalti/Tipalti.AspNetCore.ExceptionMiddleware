@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Tipalti.AspNetCore.ExceptionMiddleware.Models
 {
-    internal class ExceptionMiddlewareResponse
+    /// <summary>
+    /// The response used for handled exceptions.
+    /// </summary>
+    public class ExceptionMiddlewareResponse
     {
-        internal string ErrorCode { get; set; }
+        /// <summary>
+        /// The error code to write to the response body.
+        /// </summary>
+        public string ErrorCode { get; set; }
     }
 }

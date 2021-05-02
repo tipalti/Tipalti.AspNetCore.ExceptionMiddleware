@@ -34,7 +34,6 @@ namespace Tipalti.AspNetCore.ExceptionMiddleware.Middleware
         private Task HandleException(HttpContext context)
         {
             IExceptionHandlerFeature contextFeature = context.Features.Get<IExceptionHandlerFeature>();
-            ExceptionResult responseToWrite = null;
 
             if (contextFeature == null)
             {
@@ -57,13 +56,13 @@ namespace Tipalti.AspNetCore.ExceptionMiddleware.Middleware
                 return Task.CompletedTask;
             }
 
-            responseToWrite = matchingHandler.Handler.DynamicInvoke(exception) as ExceptionResult;
+            ExceptionResult responseToWrite = matchingHandler.Handler.DynamicInvoke(exception) as ExceptionResult;
 
             var responseString = JsonSerializer
                 .Serialize(new ExceptionMiddlewareResponse
                 {
                     ErrorCode = responseToWrite.ErrorCode
-                });
+                }, _options.JsonSerializerOptions);
 
             context.Response.StatusCode = (int)responseToWrite.StatusCode;
             context.Response.ContentType = _options.ContentType;
